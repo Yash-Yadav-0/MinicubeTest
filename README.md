@@ -1,0 +1,2 @@
+# MinicubeTest
+Minicube Kubernete practice.
