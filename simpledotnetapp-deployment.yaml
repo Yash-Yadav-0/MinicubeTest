@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simpledotnetapp-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simpledotnetapp
+  template:
+    metadata:
+      labels:
+        app: simpledotnetapp
+    spec:
+      containers:
+      - name: simpledotnetapp
+        image: simpledotnetapp:latest  # Change 'latest' to your desired tag if needed
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
